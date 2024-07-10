@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <input onchange="hoVaTen()" type="text" placeholder="Nhập tên của bạn" id="fullname">
+    <input onchange="soTuoi()" type="number" placeholder="Nhập tuổi của bạn" id="fullage">
+    <button onclick="data()">Confirm</button>
+
+    <div><h3 id="text">Họ và tên:</h3></div>
+    <div><h3 id="number">Số tuổi:</h3></div>
+    <div><h3 id="database">Tên và tuổi là:</h3></div>
+    <script>
+        function data() {
+            let ten =  document.getElementById("fullname").value;
+            document.getElementById("text").innerHTML = "Họ và tên: " + ten;
+            let tuoi = document.getElementById("fullage").value;
+            document.getElementById("number").innerHTML = "Số tuổi: " + tuoi;
+            let tenTuoi = ten + tuoi;
+            document.getElementById("database").innerHTML = "Tên và tuổi là: " + tenTuoi;
+        }
+    </script>
+</body>
+</html>
